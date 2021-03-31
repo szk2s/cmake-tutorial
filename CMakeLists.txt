@@ -13,10 +13,6 @@ add_subdirectory(MathFunctions)
 # add the executable
 add_executable(Tutorial tutorial.cxx)
 
-target_link_libraries(Tutorial PRIVATE
-    MathFunctions
-)
-
 configure_file(TutorialConfig.h.in TutorialConfig.h)
 target_include_directories(Tutorial PRIVATE 
     ${PROJECT_BINARY_DIR}
