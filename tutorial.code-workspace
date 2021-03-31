@@ -1,0 +1,37 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "extensions": {
+        "recommendations": [
+            "ms-vscode.cmake-tools",
+            "twxs.cmake",
+            "ms-vscode.cpptools",
+            "llvm-vs-code-extensions.vscode-clangd",
+            "vadimcn.vscode-lldb"
+        ]
+    },
+    "settings": {
+        "C_Cpp.intelliSenseEngine": "Disabled",
+        "C_Cpp.default.cppStandard": "c++17",
+        "cmake.buildDirectory": "${workspaceFolder}/build",
+        "cmake.preferredGenerators": [
+            "Ninja",
+            "Unix Makefiles"
+        ],
+    },
+    "launch": {
+        "configurations": [
+            {
+                "type": "lldb",
+                "request": "launch",
+                "name": "CMake Debug",
+                "program": "${command:cmake.launchTargetPath}",
+                "args": [],
+                "cwd": "${workspaceFolder}"
+            },
+        ]
+    }
+}
